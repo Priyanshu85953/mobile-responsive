@@ -35,6 +35,11 @@ body{
 	font-size: 12px;
 	overflow:hidden;
 }
+/* Default styles for mobile */
+header img {
+    height: 50px;
+    width: 980px;
+}
 
 #header_1{
 	font-family: Arial,Helvetica,sans-serif;
@@ -142,6 +147,17 @@ body{
 	background-image: url("download.png");
     overflow-y: scroll;
     height: 1400px;
+}
+/* Styles for desktop using media queries */
+@media (min-width: 1024px) {
+    header img {
+        height: 50px;
+        width: 1450px;
+    }
+
+    #question_area_scrollable {
+        height: 400px;
+    }
 }
 .question-title{
 	border-bottom: 1px solid #dbdbdb;
