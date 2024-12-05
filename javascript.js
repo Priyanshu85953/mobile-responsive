@@ -3,7 +3,7 @@
 let totalMinutes = 181; // 120 minutes
 let timeLeft = totalMinutes * 60; // Convert minutes to seconds
 let timerId;
-let timerKey = 'IAT TEST 21....'; // Unique key for the 120-min timer
+let timerKey = 'FULL TEST - 20'; // Unique key for the 120-min timer
 
 // Check if there is a saved time in localStorage
 if (localStorage.getItem(timerKey)) {
@@ -68,7 +68,11 @@ function handleLogin(event) {
 
     // Object with valid usernames and their respective passwords
     const validCredentials = {
-        "ROHIT01": "ROHIT01",
+        "ARYAN01": "ARYAN01",
+        "SAMPAUL01": "SAMPAUL01",
+        "ARZOO01": "ARZOO01",
+        "ANSH01": "ANSH01",
+        "VINEET01": "VINEET01",
         "jee02": "124",
         "jee03": "125",
         "jee04": "126"
@@ -92,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const sectionData = {
         phySec1: [],
-        // phySec2: []
+        phySec2: [],
         chemSec1: [],
-        // chemSec2: [],
+        chemSec2: [],
         mathsSec1: [],
-        // mathsSec2: []
-        bioSec1: []
+        mathsSec2: []
+        // bioSec1: []
     };
     
     // Function to generate URLs based on question number
@@ -106,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     // Populate phySec1
-    for (let i = 1; i <= 15; i++) {
+    for (let i = 1; i <= 20; i++) {
         sectionData.phySec1.push({
             questionNumber: i,
             url
@@ -116,43 +120,39 @@ document.addEventListener('DOMContentLoaded', function () {
             //  ? "https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/WPE%20%2B%20CIRCULAR%20MAINS%20TEST%2FCOM%20ADV%20QUES%2F2.jpeg?alt=media&token=a2768062-ab05-4fca-9ceb-b229c4d090ba"
             //  : i === 15 
             //  ? "https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/WPE%20%2B%20CIRCULAR%20MAINS%20TEST%2FCOM%20ADV%20QUES%2F5.jpeg?alt=media&token=90d1cb20-cd1c-453a-9a6e-8b44c56a9201"
-            : generateUrl('physics%20iat%2021', i),  // Default URL for other questions
+            : generateUrl('phy%20full%20test%20-%202', i),  // Default URL for other questions
             options
             // : i === 1 ? ["3", "6", "9", "12"]
             // : i === 2 ? ["1", "3", "5", "7"]
-            : i === 1 ? ["2", "6", "3", "9"]
-            : i === 4 ? ["2.82", "1.73", "2", "1.41"]
-            : i === 5 ? ["3", "6", "4", "9"]
-            : i === 6 ? ["1600", "2067", "2533", "800"]
-            : i === 9 ? ["170", "171", "172", "173"]
-            : i === 10 ? ["1.73", "3.46", "1.41", "6.26"]
-            : i === 11 ? ["6", "5", "3", "1"]
-            : i === 12 ? ["3", "6", "4", "9"]
-            : i === 13 ? ["P-3, Q-1, R-4, S-2", "P-4, Q-2, R-3, S-1", "P-3, Q-1, R-2, S-4", "P-4, Q-1, R-4, S-2"]
-            : i === 14 ? ["1", "2", "3", "4"]
-            : i === 15 ? ["6/5", "5/6", "7/5", "7/3"]
+            // : i === 12 ? ["1", "4", "5", "2"]
+            // : i === 4 ? ["4", "2", "6", "5"]
+            // : i === 7 ? ["6", "5", "3", "1"]
+            // : i === 13 ? ["2π√mk1/k2", "2π√m/(k1+k2)", "2π√m/(k1k2)", "2π√m/(k1-k2)"]
+            : i === 3 ? ["6.7", "10", "3.3", "3.4"]
+            : i === 4 ? ["15N", "100N", "2N", "20N"]
+            : i === 19 ? ["10", "10.6", "25", "20"]
             : ["A", "B", "C", "D"], // Custom options for question 2
             correctAnswer: [
-              /*1*/ "2",
+              /*1*/ "A",
 /*2*/ "B",
-/*3*/ "C",
-/*4*/ "1.41",
-/*5*/ "6",
-/*6*/ "2067",
-/*7*/ "A",
-/*8*/ "C",
-/*9*/ "171",
-/*10*/ "1.73",
-/*11*/ "3",
-/*12*/ "6",
-/*13*/ "P-3, Q-1, R-4, S-2",
-/*14*/ "2",
-/*15*/ "7/3",
-// /*16*/ "C",
-// /*17*/ "9",
-// /*18*/ "A",
-// /*19*/ "90",
-// /*20*/ "C",
+/*3*/ "6.7",
+/*4*/ "100N",
+/*5*/ "A",
+/*6*/ "B",
+/*7*/ "B",
+/*8*/ "B",
+/*9*/ "A",
+/*10*/ "B",
+/*11*/ "A",
+/*12*/ "B",
+/*13*/ "B",
+/*14*/ "A",
+/*15*/ "B",
+/*16*/ "D",
+/*17*/ "B",
+/*18*/ "C",
+/*19*/ "10",
+/*20*/ "B",
 
 
 
@@ -162,22 +162,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     // Populate phySec2
-    // const phySec2CorrectAnswers = [
-    //     /*1*/ 727,
-    //     /*2*/ 40,
-    //     /*3*/ 45,
-    //     /*4*/ 2,
-    //     /*5*/ 5.725];
-    // for (let i = 21; i <= 25; i++) {
-    //     sectionData.phySec2.push({
-    //         questionNumber: i,
-    //         url: generateUrl('physics%20full%20test%20-%201', i),
-    //         correctAnswer: phySec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
-    //     });
-    // }
+    const phySec2CorrectAnswers = [
+        /*1*/ 1,
+        /*2*/ 5,
+        /*3*/ 8,
+        /*4*/ 3,
+        /*5*/ 2];
+    for (let i = 21; i <= 25; i++) {
+        sectionData.phySec2.push({
+            questionNumber: i,
+            url: generateUrl('phy%20full%20test%20-%202', i),
+            correctAnswer: phySec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
+        });
+    }
     
     // // Populate chemSec1
-    for (let i = 1; i <= 15; i++) {
+    for (let i = 1; i <= 20; i++) {
         sectionData.chemSec1.push({
             questionNumber: i,    
              url
@@ -187,82 +187,82 @@ document.addEventListener('DOMContentLoaded', function () {
             //  ? "https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/WPE%20%2B%20CIRCULAR%20MAINS%20TEST%2FCOM%20ADV%20QUES%2F2.jpeg?alt=media&token=a2768062-ab05-4fca-9ceb-b229c4d090ba"
             //  : i === 15 
             //  ? "https://firebasestorage.googleapis.com/v0/b/mentorsmantratestportal1.appspot.com/o/WPE%20%2B%20CIRCULAR%20MAINS%20TEST%2FCOM%20ADV%20QUES%2F5.jpeg?alt=media&token=90d1cb20-cd1c-453a-9a6e-8b44c56a9201"
-            : generateUrl('chemistry%20IAT%2021', i),  // Default URL for other questions
+            : generateUrl('chem%20full%20test%20-%202', i),  // Default URL for other questions
             options
-            // : i === 1 ? ["statemnt i, ii, iii", "statemnt ii, iv", "statemnt i, ii, iv", "All of these"]
-            // : i === 2 ? ["34.42", "84.62", "41.32", "60"]
-            : i === 13 ? ["15", "13", "11", "9"]
+            : i === 3 ? ["(III)>(II)>(I)=(IV)>(V)=(VI)", "(III)>(I)>(II)=(IV)>(V)=(VI)", "(III)>(II)>(I)=(IV)>(V)=(VI)", "(III)>(I)>(IV)>(V)>(II)>(VI)"]
+            : i === 15 ? ["(a)-(I), (b)-(II), (c)-(III), (d)-(IV)", "(a)-(IV), (b)-(I), (c)-(II), (d)-(III)", "(a)-(II), (b)-(I), (c)-(IV), (d)-(III)", "(a)-(II), (b)-(I), (c)-(III), (d)-(IV)"]
+            : i === 18 ? ["1", "2", "3", "4"]
             // : i === 10 ? ["(1)", "(2)", "(3)", "(4)"]
             : ["A", "B", "C", "D"], // Custom options for question 2
             correctAnswer: [
-              /*1*/ "A",  
-/*2*/ "D",  
-/*3*/ "C",  
-/*4*/ "B",  
-/*5*/ "C",  
-/*6*/ "C",  
-/*7*/ "B",  
-/*8*/ "C",  
-/*9*/ "D",  
-/*10*/ "C",  
-/*11*/ "C",  
-/*12*/ "A",  
-/*13*/ "15",  
-/*14*/ "C",  
-/*15*/ "C",  
-/*16*/ "C",  
-/*17*/ "D",  
-/*18*/ "A" 
-                // /*19*/ "A",
-                // /*20*/ "A",
+                /*1*/ "B",
+                /*2*/ "B",
+                /*3*/ "(II)>(I)=(III)=(IV)>(V)=(VI)",
+                /*4*/ "D",
+                /*5*/ "A",
+                /*6*/ "B",
+                /*7*/ "A",
+                /*8*/ "C",
+                /*9*/ "D",
+                /*10*/ "A",
+                /*11*/ "D",
+                /*12*/ "D",
+                /*13*/ "D",
+                /*14*/ "D",
+                /*15*/ "(a)-(II), (b)-(I), (c)-(IV), (d)-(III)",
+                /*16*/ "A",
+                /*17*/ "B",
+                /*18*/ "4",
+                /*19*/ "A",
+                /*20*/ "C",
                             ][i - 1] // Adjust correct answers as needed
         });
     }
 
     //     // Populate chemSec2
-//         const chemSec2CorrectAnswers = [
-//             /*1*/ 326400,
-//             /*2*/ 19,
-//             /*3*/ 222,
-//             /*4*/ 144,
-//             /*5*/ 5];
-//         for (let i = 21; i <= 25; i++) {
-//             sectionData.chemSec2.push({
-//                 questionNumber: i,
-//                 url: generateUrl('CHEMISTRY%20FULL%20TEST-1', i),
-//                 correctAnswer: chemSec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
-//             });
-//         }
-//         // Populate mathsSec1
-    for (let i = 1; i <= 15; i++) {
+        const chemSec2CorrectAnswers = [
+            /*1*/ 3,
+            /*2*/ 3,
+            /*3*/ 3,
+            /*4*/ 1,
+            /*5*/ 4];
+        for (let i = 21; i <= 25; i++) {
+            sectionData.chemSec2.push({
+                questionNumber: i,
+                url: generateUrl('chem%20full%20test%20-%202', i),
+                correctAnswer: chemSec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
+            });
+        }
+        // Populate mathsSec1
+    for (let i = 1; i <= 20; i++) {
         sectionData.mathsSec1.push({
             questionNumber: i,
-            url: generateUrl('maths%20iat%2021', i),
+            url: generateUrl('maths%20full%20test%20-2', i),
             options
             // : i === 5 ? ["(1)", "(2)", "(3)", "(4)"]
             // : i === 10 ? ["(1)", "(2)", "(3)", "(4)"] 
             :["A", "B", "C", "D"],
             correctAnswer: [
-/*1*/ "B",  
-/*2*/ "D",  
-/*3*/ "A",  
-/*4*/ "C",  
-/*5*/ "A",  
-/*6*/ "C",  
-/*7*/ "B",  
-/*8*/ "D",  
-/*9*/ "A",  
-/*10*/ "B",  
-/*11*/ "A",  
-/*12*/ "D",  
-/*13*/ "B",  
-/*14*/ "B",  
-/*15*/ "C",  
-/*16*/ "A",  
-/*17*/ "A",  
-/*18*/ "C",  
-/*19*/ "B",
-/*20*/ "D"
+ /*1*/ "D",
+/*2*/ "D",
+/*3*/ "D",
+/*4*/ "C",
+/*5*/ "C",
+/*6*/ "D",
+/*7*/ "C",
+/*8*/ "B",
+/*9*/ "B",
+/*10*/ "B",
+/*11*/ "D",
+/*12*/ "C",
+/*13*/ "A",
+/*14*/ "C",
+/*15*/ "B",
+/*16*/ "C",
+/*17*/ "D",
+/*18*/ "B",
+/*19*/ "C",
+/*20*/ "A"
 
 
             ][i - 1]  // Adjust correct answers as needed
@@ -270,57 +270,54 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
      // Populate mathsSec2
-    // const mathsSec2CorrectAnswers = [
-    //     /*1*/ 0.8,
-    //     /*2*/ 100,
-    //     /*3*/ 91,
-    //     /*4*/ 3,
-    //     /*5*/ 118];
-    // for (let i = 21; i <= 25; i++) {
-    //     sectionData.mathsSec2.push({
-    //         questionNumber: i,
-    //         url: generateUrl('MATHS%20FULL%20TEST-1', i),
-    //         correctAnswer: mathsSec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
-    //     });
-    //     }
-
-    //bio sec 1
-    for (let i = 1; i <= 15; i++) {
-        sectionData.bioSec1.push({
+    const mathsSec2CorrectAnswers = [
+        /*1*/ 2,
+        /*2*/ 6,
+        /*3*/ 7,
+        /*4*/ 1,
+        /*5*/ 8];
+    for (let i = 21; i <= 25; i++) {
+        sectionData.mathsSec2.push({
             questionNumber: i,
-            url: generateUrl('bio%20iat%2021', i),
-            options: ["A", "B", "C", "D"],
-            correctAnswer: [
-/*1*/ "C",  
-/*2*/ "A",  
-/*3*/ "C",  
-/*4*/ "D",  
-/*5*/ "D",  
-/*6*/ "A",  
-/*7*/ "D",  
-/*8*/ "A",  
-/*9*/ "B",  
-/*10*/ "B",  
-/*11*/ "A",  
-/*12*/ "C",  
-/*13*/ "B",  
-/*14*/ "B",  
-/*15*/ "D"  
-
-
-                ][i - 1]  // Adjust correct answers as needed
+            url: generateUrl('maths%20full%20test%20-2', i),
+            correctAnswer: mathsSec2CorrectAnswers[i - 21] // Adjusting the index to start from 0
         });
-    }
+        }
+//     for (let i = 1; i <= 15; i++) {
+//         sectionData.bioSec1.push({
+//             questionNumber: i,
+//             url: generateUrl('BIO%20IAT%20TEST%2020', i),
+//             options: ["A", "B", "C", "D"],
+//             correctAnswer: [
+//                /*1*/ "C",
+// /*2*/ "D",
+// /*3*/ "C",
+// /*4*/ "A",
+// /*5*/ "B",
+// /*6*/ "A",
+// /*7*/ "B",
+// /*8*/ "B",
+// /*9*/ "C",
+// /*10*/ "A",
+// /*11*/ "A",
+// /*12*/ "B",
+// /*13*/ "C",
+// /*14*/ "D",
+// /*15*/ "C"
+
+//                 ][i - 1]  // Adjust correct answers as needed
+//         });
+//     }
     
 
     const sectionQuestionIndex = {
         phySec1: 0,
-        // phySec2: 0
+        phySec2: 0,
         chemSec1: 0,
-        // chemSec2: 0,
+        chemSec2: 0,
         mathsSec1: 0,
-        // mathsSec2: 0
-        bioSec1: 0
+        mathsSec2: 0
+        // bioSec1: 0
     };
 
     const selectedAnswers = {};
@@ -573,7 +570,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function getNextSection() {
-        const sectionNames = ["phySec1","chemSec1", "mathsSec1", "bioSec1"];
+        const sectionNames = ["phySec1","phySec2","chemSec1", "chemSec2", "mathsSec1", "mathsSec2"];
         const currentIndex = sectionNames.indexOf(currentSection);
         if (currentIndex < sectionNames.length - 1) {
             return sectionNames[currentIndex + 1];
@@ -641,12 +638,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function status() {
         // Calculate the number of not answered questions
-        const notAnswered = 60 - ((60-nisVisited) + nmarkedForReview + nsmarkedForReview + nselectedAnswers);
+        const notAnswered = 75 - ((75-nisVisited) + nmarkedForReview + nsmarkedForReview + nselectedAnswers);
     
         // Update the status display in the sidebar
         document.querySelector('.just_51').textContent = nselectedAnswers;       // Answered
         document.querySelector('.just_52').textContent = notAnswered;           // Not Answered
-        document.querySelector('.just_53').textContent = 60 - nisVisited;       // Not Visited
+        document.querySelector('.just_53').textContent = 75 - nisVisited;       // Not Visited
         document.querySelector('.just_54').textContent = nmarkedForReview;      // Marked for Review
         document.querySelector('.just_55').textContent = nsmarkedForReview;     // Marked for Answer for Review
     }
@@ -748,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Calculate attempted (visited), correct, and not attempted questions
         let totalAttempted = nisVisited; // Visited questions are considered attempted
         let totalCorrect = 0;
-        let totalNotAttempted = 60 - nisVisited; // Assuming a total of 75 questions
+        let totalNotAttempted = 75 - nisVisited; // Assuming a total of 75 questions
         const sectionStats = {};
     
         Object.keys(sectionData).forEach(section => {
@@ -875,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Add click event listeners for the sections
     document.querySelectorAll('.section_unselected, .section_selected').forEach((element, index) => {
-        const sectionNames = ["phySec1","chemSec1", "mathsSec1", "bioSec1"];
+        const sectionNames = ["phySec1","phySec2","chemSec1", "chemSec2", "mathsSec1", "mathsSec2"];
         element.addEventListener('click', () => {
             switchSection(sectionNames[index]);
         });
